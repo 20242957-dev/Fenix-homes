@@ -1,0 +1,31 @@
+name: Build FenixHomes
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+          cache: maven
+
+      - name: Compilar FenixHomes
+        run: mvn clean package
+
+      - name: Subir FenixHomes.jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: FenixHomes
+          path: target/FenixHomes.jar
