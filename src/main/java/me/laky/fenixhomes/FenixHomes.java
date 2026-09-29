@@ -20,6 +20,12 @@ public class FenixHomes extends JavaPlugin {
         getCommand("delhome").setExecutor(new HomeCommand(homeManager));
         getCommand("homes").setExecutor(new HomeCommand(homeManager));
 
+        // Registrar eventos del menu
+        getServer().getPluginManager().registerEvents(
+                new HomesListener(homeManager),
+                this
+        );
+
         getLogger().info("FenixHomes ha sido activado correctamente.");
         getLogger().info("Limite de jugador normal: 5 homes.");
     }
