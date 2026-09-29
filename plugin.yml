@@ -1,0 +1,39 @@
+name: FenixHomes
+version: 1.0.0
+main: me.laky.fenixhomes.FenixHomes
+author: LAKY
+description: Sistema de homes para Minecraft 1.12.2
+
+commands:
+  sethome:
+    description: Guarda un home
+    usage: /sethome <nombre>
+    aliases: [sh]
+
+  home:
+    description: Teletransporta a un home
+    usage: /home <nombre>
+    aliases: [h]
+
+  delhome:
+    description: Elimina un home
+    usage: /delhome <nombre>
+    aliases: [dh]
+
+  homes:
+    description: Muestra tus homes
+    usage: /homes
+    aliases: [mis-homes]
+
+permissions:
+  fenixhomes.homes.5:
+    description: Permite tener hasta 5 homes
+    default: true
+
+  fenixhomes.homes.10:
+    description: Permite tener hasta 10 homes
+    default: false
+
+  fenixhomes.homes.unlimited:
+    description: Permite tener homes ilimitados
+    default: false
