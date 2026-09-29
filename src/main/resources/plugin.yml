@@ -6,24 +6,20 @@ description: Sistema de homes para Minecraft 1.12.2
 
 commands:
   sethome:
-    description: Guarda un home
+    description: Establece un home
     usage: /sethome <nombre>
-    aliases: [sh]
 
   home:
     description: Teletransporta a un home
     usage: /home <nombre>
-    aliases: [h]
 
   delhome:
     description: Elimina un home
     usage: /delhome <nombre>
-    aliases: [dh]
 
   homes:
     description: Muestra tus homes
     usage: /homes
-    aliases: [mis-homes]
 
 permissions:
   fenixhomes.homes.5:
